@@ -73,7 +73,7 @@ public class SparqlEndpoint {
 	
 	public void start(final int port) {
 		final Dataset dataset = DatasetFactory.create(model);
-		ServerConfig config = FusekiConfig.defaultConfiguration("dataset", dataset.asDatasetGraph(), false, true);
+		ServerConfig config = FusekiConfig.defaultConfiguration("dataset", dataset.asDatasetGraph(), true, true);
 		config.port = config.pagesPort = port;
 		config.pages = null;
 		
